@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SalesTrustAccount.Models;
 
 namespace SalesTrustAccount.Data
 {
@@ -11,6 +12,9 @@ namespace SalesTrustAccount.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+
         }
+
+        public DbSet<Clients> Client { get; set; }
     }
 }
